@@ -26,7 +26,7 @@ public class Main {
         HttpRequest httpPostRequest = HttpRequest.newBuilder()
                 .uri(new URI("https://api.assemblyai.com/v2/transcript"))
                 .timeout(Duration.ofSeconds(30))
-                .header("authorization", "1791475b90714575bdf9a4cb1b672842")
+                .header("authorization", "API KEY")
                 .POST(HttpRequest.BodyPublishers.ofString(jsonString))
                 .build();
 
@@ -40,7 +40,7 @@ public class Main {
         HttpRequest httpGetRequest = HttpRequest.newBuilder()
                 .uri(new URI("https://api.assemblyai.com/v2/transcript" + "/" + id))
                 .timeout(Duration.ofSeconds(30))
-                .header("authorization", "1791475b90714575bdf9a4cb1b672842")
+                .header("authorization", "API KEY")
                 .build();
 
         JsonNode jsonNodeHttpGetResponse;
